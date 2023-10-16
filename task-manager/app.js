@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const routes = require("./routes/tasks");
 const connectDb = require("./db/connect");
+// dotenv for secret strings
 require("dotenv").config();
 
 app.use(express.json()); //to get data in req body
