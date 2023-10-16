@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const routes = require("./routes/tasks");
 const connectDb = require("./db/connect");
+require("dotenv").config();
 
 app.use(express.json()); //to get data in req body
 
@@ -13,7 +14,7 @@ app.use("/api/v1/tasks", routes);
 
 const start = async () => {
   try {
-    await connectDb();
+    await connectDb(process.env.MONGO_URI);
   } catch (error) {
     console.log(error);
   }
