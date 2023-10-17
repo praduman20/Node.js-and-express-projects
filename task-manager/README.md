@@ -14,7 +14,7 @@ The Task Manager is a Node.js backend project that allows users to manage their 
 
 ## Screenshots -
 
-
+<img width="760" alt="Screenshot 2023-10-17 at 2 42 07 PM" src="https://github.com/praduman20/Node.js-and-express-projects/assets/87388316/efaaff4f-3228-4808-b60d-0c3377c96ea3">
 
 ## Installation -
 
@@ -31,20 +31,20 @@ The Task Manager is a Node.js backend project that allows users to manage their 
 
 You can access the Task Manager API using the following endpoints:
 
-1. GET /api/v1/tasks: Retrieve all tasks.
-2. GET /api/v1/tasks/:id: Retrieve a specific task by ID.
-3. POST /api/v1/tasks: Create a new task.
+1. `GET /api/v1/tasks`: Retrieve all tasks.
+2. `GET /api/v1/tasks/:id`: Retrieve a specific task by ID.
+3. `POST /api/v1/tasks`: Create a new task.
    Request body example:
    {
       "name":"Buy grocery",
       "completed":"false"
    }
-4. PATCH /api/v1/tasks/:id: Update a specific task by ID.
+4. `PATCH /api/v1/tasks/:id`: Update a specific task by ID.
    Request body example:
    {
       "name":"Wash dishes",
    }
-6. DELETE /api/v1/tasks/:id: Delete a task.
+5. `DELETE /api/v1/tasks/:id`: Delete a task.
 
 
 ## License
