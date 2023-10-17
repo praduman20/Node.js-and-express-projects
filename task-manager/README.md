@@ -1,4 +1,4 @@
-# Node.js and express project 1 - Task Manager
+# Node.js and express project - Task Manager
 
 ## Project description - 
 The Task Manager is a Node.js backend project that allows users to manage their tasks. You can create, delete, edit, and mark tasks as complete. The project uses MongoDB as the database and Mongoose for data interaction. This README provides essential information for developers to get started with the project.
