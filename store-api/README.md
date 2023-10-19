@@ -14,7 +14,7 @@ This project is all about a robust and flexible store API built with Node.js and
 
 ## Installation -
 
-1. Clone the repository : git clone https://github.com/your-username/task-manager.git
+1. Clone the repository : git clone https://github.com/praduman20/Node.js-and-express-projects/tree/main/store-api
 2. Change to the project directory: cd task-manager
 3. Install project dependencies: npm install
 4. Configure environment variables by creating a .env file in the project root. Set the following variables:
