@@ -1,5 +1,3 @@
-// to send all the data of products.json to our database we have this file populate.js
-
 require("dotenv").config();
 
 const connecDb = require("./db/connect");
@@ -12,8 +10,10 @@ const start = async () => {
     await product.deleteMany();
     await product.create(jsonProducts);
     console.log("success");
+    process.exit(0);
   } catch (error) {
     console.log(error);
+    process.exit(1);
   }
 };
 
