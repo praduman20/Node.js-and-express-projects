@@ -1,9 +1,9 @@
-# Node.js and express project - Task Manager
+# Node.js and express project - Store API
 
 ## Project description - 
 The Task Manager is a Node.js backend project that allows users to manage their tasks. You can create, delete, edit, and mark tasks as complete. The project uses MongoDB as the database and Mongoose for data interaction. This README provides essential information for developers to get started with the project.
 
-## Project Link - https://task-manager-0h7b.onrender.com
+## Project Link - https://store-api-dctv.onrender.com
 
 ## Built with - 
 
@@ -11,10 +11,6 @@ The Task Manager is a Node.js backend project that allows users to manage their 
 2. Express
 3. MongoDb
 4. Mongoose
-
-## Screenshots -
-
-<img width="760" alt="Screenshot 2023-10-17 at 2 42 07 PM" src="https://github.com/praduman20/Node.js-and-express-projects/assets/87388316/efaaff4f-3228-4808-b60d-0c3377c96ea3">
 
 ## Installation -
 
@@ -29,22 +25,28 @@ The Task Manager is a Node.js backend project that allows users to manage their 
 
 ## API Reference - 
 
-You can access the Task Manager API using the following endpoints:
+1. Base URL - 
+All endpoints are relative to the base URL: https://store-api-dctv.onrender.com
 
-1. `GET /api/v1/tasks`: Retrieve all tasks.
-2. `GET /api/v1/tasks/:id`: Retrieve a specific task by ID.
-3. `POST /api/v1/tasks`: Create a new task.
-   Request body example:
-   {
-      "name":"Buy grocery",
-      "completed":"false"
-   }
-4. `PATCH /api/v1/tasks/:id`: Update a specific task by ID.
-   Request body example:
-   {
-      "name":"Wash dishes",
-   }
-5. `DELETE /api/v1/tasks/:id`: Delete a task.
+2. Error Responses - 
+The API follows standard HTTP status codes and returns error responses in the following format:
+
+   * In case of unknown route given - Route does not exist (HTTP status code - 404)
+   * Any other error - Something went wrong, please try again (HTTP status code - 500)
+
+3. Endpoint -
+You can access the Task Manager API using the following endpoint:
+
+`GET /api/v1/products`: Retrieve ten products as the limit is set to 10.
+
+Query Parameters:
+
+`name` (string): Filter by product name (e.g. name=dining table).
+`company` (string): Filter by company name (e.g. company=ikea).
+`fields` (string, comma-separated): Select specific fields to be included in the response (e.g., fields=name,price).
+`numberFilter` (string): Filter by price or rating (e.g., numberFilter=price>10 for prices greater than 10).
+`sort` (string): Sort the results by field name. Prefix with '-' to indicate descending order (e.g., sort=-price for descending order).
+`featured` (boolean): Filter by featured products (e.g. featured=false).
 
 
 ## License
