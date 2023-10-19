@@ -1,3 +1,5 @@
+// to put our data in mongodb database
+
 require("dotenv").config();
 
 const connecDb = require("./db/connect");
