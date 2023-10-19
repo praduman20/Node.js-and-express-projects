@@ -1,7 +1,7 @@
 # Node.js and express project - Store API
 
 ## Project description - 
-The Task Manager is a Node.js backend project that allows users to manage their tasks. You can create, delete, edit, and mark tasks as complete. The project uses MongoDB as the database and Mongoose for data interaction. This README provides essential information for developers to get started with the project.
+This project is all about a robust and flexible store API built with Node.js and Express, utilizing Mongoose to interact with a MongoDB database. The API empowers developers to manage products, apply advanced queries, and retrieve results with features like filtering, sorting, and field selection.
 
 ## Project Link - https://store-api-dctv.onrender.com
 
@@ -41,14 +41,17 @@ You can access the Task Manager API using the following endpoint:
 
 Query Parameters:
 
-`name` (string): Filter by product name (e.g. name=dining table).
-`company` (string): Filter by company name (e.g. company=ikea).
-`fields` (string, comma-separated): Select specific fields to be included in the response (e.g., fields=name,price).
-`numberFilter` (string): Filter by price or rating (e.g., numberFilter=price>10 for prices greater than 10).
-`sort` (string): Sort the results by field name. Prefix with '-' to indicate descending order (e.g., sort=-price for descending order).
-`featured` (boolean): Filter by featured products (e.g. featured=false).
+* `name` (string): Filter by product name (e.g. name=dining table).
+* `company` (string): Filter by company name (e.g. company=ikea).
+* `featured` (boolean): Filter by featured products (e.g. featured=false).
+* `fields` (string, comma-separated): Select specific fields to be included in the response (e.g., fields=name,price).
+* `sort` (string): Sort the results by field name. Prefix with '-' to indicate descending order (e.g., sort=-price for descending order).
+* `numberFilter` (string): Filter by price or rating (e.g. numberFilter=price>10 for prices greater than 10).
+* `limit` (integer): Limit the number of products (e.g. limit=5).
 
-
+  Example Request:
+  GET https://store-api-dctv.onrender.com/api/v1/products?numberFilter=price>150&sort=-price&fields=name,price
+  
 ## License
 
 This repository is licensed under the [MIT License](https://opensource.org/license/mit/). Feel free to use the code for personal or commercial purposes.
