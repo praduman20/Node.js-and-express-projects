@@ -1,25 +1,30 @@
-# Node.js and express project - Store API
+# Node.js and express project - JWT Project
 
 ## Project description - 
-This project is all about a robust and flexible store API built with Node.js and Express, utilizing Mongoose to interact with a MongoDB database. The API empowers developers to manage products, apply advanced queries, and retrieve results with features like filtering, sorting, and field selection.
+This project is a backend implementation of a secure authentication system using JSON Web Tokens. It is built with Node.js, Express and jsonwebtoken package. JSON Web Tokens (JWT) are used for user authentication, allowing users to access specific routes based on the validity of the token they provide.
 
-## Project Link - https://store-api-dctv.onrender.com
+## Project Link - https://jwt-project-hsjx.onrender.com
+
+## Features - 
+
+* User Authentication: Users can log in and receive a JWT token that must be used for accessing protected routes.
+* Token Verification: The project verifies the authenticity of tokens to ensure secure access to the dashboard route.
+* Express Routing: The project uses Express.js for routing, making it easy to manage different endpoints.
 
 ## Built with - 
 
 1. Node.js
 2. Express
-3. MongoDb
-4. Mongoose
+3. jsonwebtoken package
 
 ## Installation -
 
 1. Clone the repository : git clone https://github.com/praduman20/Node.js-and-express-projects/tree/main/store-api
-2. Change to the project directory: cd task-manager
+2. Change to the project directory: cd JWT-project
 3. Install project dependencies: npm install
 4. Configure environment variables by creating a .env file in the project root. Set the following variables:
    PORT=3000
-   MONGODB_URI=your-mongodb-connection-string
+   JWT_SECRET=your-secret-key
 5. Start the server: npm start
 6. The Task Manager server should now be running on 'http://localhost:3000'.
 
