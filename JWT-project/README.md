@@ -23,7 +23,7 @@ This project is a backend implementation of a secure authentication system using
 
 ## Installation -
 
-1. Clone the repository : git clone https://github.com/praduman20/Node.js-and-express-projects/tree/main/store-api
+1. Clone the repository : git clone https://github.com/praduman20/Node.js-and-express-projects/tree/main/JWT-project
 2. Change to the project directory: cd JWT-project
 3. Install project dependencies: npm install
 4. Configure environment variables by creating a .env file in the project root. Set the following variables:
