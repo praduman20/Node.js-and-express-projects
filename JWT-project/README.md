@@ -11,6 +11,10 @@ This project is a backend implementation of a secure authentication system using
 * Token Verification: The project verifies the authenticity of tokens to ensure secure access to the dashboard route.
 * Express Routing: The project uses Express.js for routing, making it easy to manage different endpoints.
 
+## Screenshots - 
+
+<img width="533" alt="Screenshot 2023-10-25 at 9 23 36 PM" src="https://github.com/praduman20/Node.js-and-express-projects/assets/87388316/d86e8b6e-6e5c-49aa-948f-d2cf87e50adf">
+
 ## Built with - 
 
 1. Node.js
@@ -30,32 +34,23 @@ This project is a backend implementation of a secure authentication system using
 
 ## API Reference - 
 
-1. Base URL - 
-All endpoints are relative to the base URL: https://store-api-dctv.onrender.com
+1.Login - 
 
-2. Error Responses - 
-The API follows standard HTTP status codes and returns error responses in the following format:
+* Endpoint: /api/v1/login
+* Method: POST
+* Description: Allows users to log in and receive a JWT token for authentication.
+* Request Body:
+  * username (string): The user's username.
+  * password (string): The user's password.
+* Response: If the username and password are provided, the server will respond with a JWT token that will be stored in the local storage.
 
-   * In case of unknown route given - Route does not exist (HTTP status code - 404)
-   * Any other error - Something went wrong, please try again (HTTP status code - 500)
+2.Dashboard - 
 
-3. Endpoint -
-You can access the Task Manager API using the following endpoint:
-
-`GET /api/v1/products`: Retrieve ten products as the limit is set to 10.
-
-Query Parameters:
-
-* `name` (string): Filter by product name (e.g. name=dining table).
-* `company` (string): Filter by company name (e.g. company=ikea).
-* `featured` (boolean): Filter by featured products (e.g. featured=false).
-* `fields` (string, comma-separated): Select specific fields to be included in the response (e.g., fields=name,price).
-* `sort` (string): Sort the results by field name. Prefix with '-' to indicate descending order (e.g., sort=-price for descending order).
-* `numberFilter` (string): Filter by price or rating (e.g. numberFilter=price>10 for prices greater than 10).
-* `limit` (integer): Limit the number of products (e.g. limit=5).
-
-  Example Request:
-  GET https://store-api-dctv.onrender.com/api/v1/products?numberFilter=price>150&sort=-price&fields=name,price
+* Endpoint: /api/v1/dashboard
+* Method: GET
+* Description: A protected route that requires a valid JWT token for access.
+* Request Headers:
+  * Authorization : A valid JWT token in the format `Bearer YOUR_TOKEN`.
   
 ## License
 
